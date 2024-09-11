@@ -1,0 +1,245 @@
+.body{
+    background-color: aqua;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    width: 100%;
+    
+    
+}
+.body-lock{
+    background-color: aqua;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    width: 100%;
+    position: fixed;
+    
+}
+.div1{
+    
+    margin-top: 50px;
+}
+.div1 h1{
+   
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+}
+.div1 p{
+    
+    font-size: 20px;
+    text-align: center;
+}
+
+.div2 h2{
+    
+    text-align: center;
+}
+.div2 .form{
+    
+    width:  700px;
+    margin-left: 180px;
+    height: max-content;
+    
+}
+.div2 .form .form-div{
+   
+    background-color: white;
+    box-shadow: 5px 10px 8px #494747;
+    border-radius: 10px;
+    height: 330px;
+    padding-top: 20px;
+    padding-left: 100px;
+    height: 250px;
+}
+.div2 .form .form-div .new{
+    width: 250px;
+    float: left;
+    
+} 
+.div2 .form .form-div .new input{
+    width: 200PX;
+    height: 23px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+
+
+.div2 .form .form-div .form-div2{
+    width: 200px;
+    margin-left: 20px;
+}
+
+.div2 .form .form-div .form-div2 button{
+    width: 100px;
+    height: 23px;
+    background-color: red;
+    border: none;
+    color: white;
+    margin-left: -90px;     
+    cursor: pointer;
+}
+
+
+.div2 .form .form-div3{
+    background-color: white;
+    box-shadow: 5px 10px 8px #494747;
+    width: 700px;
+    border-radius: 10px;
+    height: fit-content;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+.div2 .form .form-div3 .h3{
+    font-size: 24px;
+    
+}
+.div2 .form .form-div3 .div21{
+    
+    text-align: center;
+    height: 50px;
+}
+
+.div2 .form .form-div3 .div21 .input{
+    width: 150px;
+    margin-top: 20px;
+    height: 15px;
+    
+}
+.div2 .form .form-div3 .div21 .div21-btn{
+    width: 70px;
+    height: 20px;
+    border: none;
+    background-color: red;
+    color: black;
+    font-weight: bolder;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.div2 .form .form-div3 .div1{
+    height: max-content;
+    padding-bottom: 15px;  
+    margin-top: 10px;  
+}
+
+.div2 .form .form-div3 .div1 input{
+    margin-right:20px;
+    width: 100px;
+    height: 15px;
+}
+.div2 .form .form-div3 .div1 .div1-btn{
+    height: 18px;
+    background-color: red;
+    border: none;
+    width: 60px;
+    cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
+    transition: 500ms;
+
+}
+
+.visible{
+    visibility: visible;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 10px 8px #494747;
+    border-radius: 10px;
+    width: 600px;
+    padding-top: 20px;
+    padding-left: 100px;
+    height: 350px;
+    margin-left: 180px;
+    margin-top: 50px;
+    z-index: 2;
+    transition: 500ms;
+    
+}
+.visible button{
+    margin-left: 500px;
+    margin-top: 10px;
+    background-color: red;
+    border: none;
+    height: 20px;
+    width: 40px;
+    cursor: pointer;
+}
+.overlay-hide{
+    z-index: -1;
+    visibility: hidden;
+    transition: 500ms;
+}
+.overlay{
+    background-color: #474747ef;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    visibility: visible;
+    transition: 500ms;
+}
+.section{
+    position: fixed;
+    border-bottom: 1px solid black; 
+    width: 100%;
+    background-color: rgb(0, 247, 255);
+    top: 0;
+
+     height: 50px;
+}
+.section h2{
+    position: relative;
+    top: 5px;
+    left: -420px;
+    color: rgb(255, 0, 0);
+    
+}
+.section  h4{
+    position: relative;
+    top: -25px;
+    left: 430px;
+}
+.section .sec-bn{
+            margin-left: 800px; 
+            width: 35px;
+            height: 20px;
+            background-color: red;
+            border: none;
+            position: relative;
+            top: -60px;
+            border-radius: 10px;
+            left: 80px;
+            cursor: pointer;
+}
+
+.visible form{
+    width: 500px;
+    margin-top: 20px;
+
+}
+.visible form .visible-form input{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 16px;
+    width: 190px;
+}
+
+.visible form .address  input{
+    height: 16px;
+    width: 415px;
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+.visible form button{
+    margin-left: -10px;
+    width: 80px;
+}

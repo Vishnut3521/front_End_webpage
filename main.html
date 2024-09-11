@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_details</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+
+<!-- ----------------------------------------- -------------------- -->
+<body class="body" id="body">
+    <div id="overlay" class="overlay-hide">
+
+    </div>
+    <section id="section" class="section">
+            <h2>Result Maker</h2>
+            <h4>Resister</h4>
+            <button class="sec-bn" onclick="hide()" id="bn">=</button>
+        
+    </section>
+
+   
+    <div class="hidden" id="hide">
+        
+        <button type="button" onclick="funclose()">X</button>
+        <form  class="main-form">
+            <h3 style="margin-bottom: 30px;">Fill Details</h3>
+            <div class="visible-form">
+                <input type="text" required placeholder="School name">
+                <input type="text" required placeholder="School number">
+                
+            </div>
+            
+            <div class="address">
+                <input type="text" placeholder="Address">
+            </div>
+            <div class="visible-form">
+                <input type="text" required placeholder="Contact number">
+                <input type="text" required placeholder="Email id">
+                
+            </div>
+            <div class="visible-form">
+                <input type="text" required placeholder="Class Teacher">
+                <input type="text" required placeholder="Principal">
+                
+            </div>
+            <div class="visible-form">
+                <input type="text" required placeholder="Session">
+                <input type="text" required placeholder="Session 2">
+                
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+
+
+
+
+
+    <div class="div1"><h1>Instant Result Maker</h1>
+    <p>This site help you to make instant
+        <br> result from your given details</p>
+    </div>
+    <!-- ---------------------------------------------------------- -->
+    <div class="div2" id="div2">
+        <h2>Fill Details</h2>
+        <form class="form" id="form">
+            <div class="form-div">
+                <div class="new">
+                
+                    <input type="text" required placeholder="Roll no">
+                    <input type="text" required placeholder="Class">
+                    <input type="text" required placeholder="Father Name">
+
+                </div>
+                <div class="new">
+                
+                    <input type="text" required placeholder="Name" id="name">
+                    <input type="text" required placeholder="Sec">
+                    <input type="text" required placeholder="Mobile">
+
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="form-div2" id="form-div2">
+                    <h3>Add number of exams held</h3>    
+                    <button onclick="fun1()" type="button">Add</button>
+                    <br>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br>    
+             
+            
+
+        </form>
+        
+    </div>
+    <!-- --------------------------------------------- -->
+
+
+    
+</body>
+</html>
+<script>
+
+var n=document.querySelector("#hide")    
+var form=document.querySelector("#form")
+var bn=document.querySelector("#bn")
+var sec=document.querySelector("#overlay")
+var body=document.querySelector("#body")
+
+var c=0
+function hide(){
+    n.classList.remove("hidden")
+    n.classList.add("visible")
+    bn.textContent="X"
+    sec.classList.add("overlay")
+    body.classList.add("body-lock")
+    body.classList.remove("body")
+}
+function funclose(){
+    n.classList.add("hidden")
+    n.classList.remove("visible")
+    sec.classList.remove("overlay")
+    bn.textContent="="
+    body.classList.remove("body-lock")
+    body.classList.add("body")
+}
+
+function fun1() {
+    if (c<4){
+    var form_div3=document.createElement("div")
+    form_div3.classList.add("form-div3")
+    var h=document.createElement("h3")
+    h.classList.add("h3")
+    h.textContent=("Enter Your exam name")
+    form_div3.appendChild(h)
+    form.appendChild(form_div3)
+
+    var div21=document.createElement('div')
+    div21.classList.add("div21")
+    form_div3.appendChild(div21)
+    
+    var input=document.createElement("input")
+    input.setAttribute("placeholder","Enter type of exam")
+    input.classList.add("input")
+
+
+    var btn=document.createElement("button")
+    btn.type="button"
+    btn.classList.add("div21-btn")
+    btn.setAttribute('id','btn')
+    btn.textContent="Next"
+    div21.appendChild(input)
+    div21.appendChild(btn)
+    c=c+1;
+    btn.addEventListener('click',function fun2() {
+        var inp=document.createElement("input")
+        inp.setAttribute("placeholder",'Subject name')
+        
+        var inp1=document.createElement("input")
+        inp1.setAttribute("placeholder",'Obtained marks')
+        
+        var inp2=document.createElement("input")
+        inp2.setAttribute("placeholder",'max marks')
+
+        var div1=document.createElement("div")
+        div1.classList.add("div1")
+
+        div1.appendChild(inp)
+        div1.appendChild(inp1)
+        div1.appendChild(inp2)
+
+        var btn=document.createElement("button")
+        btn.classList.add("div1-btn")
+        btn.textContent="Delete"
+        btn.type="button"
+        btn.addEventListener('click',function fun3() {
+            div1.removeChild(inp)
+            div1.removeChild(inp1)
+            div1.removeChild(inp2)
+            div1.removeChild(btn)
+        })
+
+        div1.appendChild(btn)
+        
+        form_div3.appendChild(div1)
+        
+    })
+
+    
+    }
+
+}
+
+
+
+
+</script>
